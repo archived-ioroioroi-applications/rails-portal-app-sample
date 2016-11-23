@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myportal</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+    <!-- <nav class="navbar navbar-inverse"> -->
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>  <!-- sr-only:スクリーンリーダーのみ. テキストは表示されない -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">ぽーたる<br>　ぽーたる</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+<!-- *+*+*+*++ page下に 「前のページ」「次のページ」アイコンを固定で +*+***+*+ -->
+
+    <nav class="navbar navbar-default navbar-fixed-bottom hidden-sm hidden-md hidden-lg">
+    <!-- <nav class="navbar navbar-default navbar-fixed-top"> -->
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">ぽーたる<br>　ぽーたる</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+<!-- +*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+* -->
+    <div class="container">
+      <div class="row">
+        <div class="jumbotron">
+          <h1>カラムA</h1>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3" id="header_box">
+          <div id="header_title">
+            <a href="http://headline.mtfj.net/"><img class=“img-responsive” src="http://rakugakiicon.com/ri/wp-content/uploads/2015/04/70b4d256c8f1f8830f7c1d5944db17a4.png" alt="とろたまヘッドライン"/></a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3" id="header_left">
+          <a href="/s/">スマホ版</a>
+        </div>
+        <div class="col-xs-12 col-sm-3" id="header_left">
+          <a href="/m/">携帯版</a>
+        </div>
+        <div class="col-xs-12 col-sm-3" id="header_right">
+          <a href="/">トップページ</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>ボタンの作成</h1>
+      <div class="row">
+       <div class="col-xs-12">
+        <h2>classなし</h2>
+        	<button>default</button>
+            <button>primary</button>
+            <button>success</button>
+            <button>info</button>
+            <button>warning</button>
+            <button>danger</button>
+        </div>
+        <div class="col-xs-12">
+        <h2>色指定のclassのみ</h2>
+        	<button class="btn-default">default</button>
+            <button class="btn-primary">primary</button>
+            <button class="btn-success">success</button>
+            <button class="btn-info">info</button>
+            <button class="btn-warning">warning</button>
+            <button class="btn-danger">danger</button>
+        </div>
+        <div class="col-xs-12">
+        <h2>btnと色指定のclass</h2>
+        	<button class="btn btn-default btn-lg">default</button>
+            <button class="btn btn-primary btn-lg">primary</button>
+            <button class="btn btn-success btn-lg">success</button>
+            <button class="btn btn-info btn-lg active">info</button>
+            <button class="btn btn-warning btn-lg disabled">warning</button>
+            <button class="btn btn-danger btn-lg btn-block hidden-xs">danger</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>aタグのボタン</h1>
+      <div class="row">
+        <a class="btn btn-default">default</a>
+        <a class="btn btn-primary">primary</a>
+        <a class="btn btn-success">success</a>
+        <a class="btn btn-info">info</a>
+        <a class="btn btn-warning">warning</a>
+        <a class="btn btn-danger">danger</a>
+        <a class="btn btn-link">link</a><!--btn-linkサンプル-->
+      </div>
+    </div>
+
+
+    <div class="container">
+      <h1>グリッドシステム〜複数のカラムを指定</h1>
+      <div class="row">
+        <div class="hidden-xs col-sm-12 col-md-6">カラムA</div>
+        <div class="col-sx-12 col-sm-8 col-md-4">カラムB</div>
+        <div class="col-sx-12 col-sm-4 col-md-2">カラムC</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <h1 class="text-left text-primary">フォントサイズ〜h1</h1>
+        <h2 class="text-success">フォントサイズ〜h2</h2>
+        <h3 class="text-info">フォントサイズ〜h3</h3>
+        <h1 class="h4 text-warning">フォントサイズ〜h4</h1>
+        <h5 class="text-danger">フォントサイズ〜h5</h5>
+      </div>
+      <div class="row">
+        <div class="hidden-xs col-sm-12 col-md-6 h1">カラムA</div>
+        <div class="col-xs-12 col-sm-8 col-md-4 h2">カラムB</div>
+        <div class="col-xs-12 col-sm-4 col-md-2 h3">カラムC</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>dlの使用</h1>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <dl class="dl-horizontal"> <!-- 定義・説明リスト -->
+            <dt>このサイトについて</dt>
+              <dd>色んなポータルサイトをnokogiriでスクレイピングすることで、自動で自分だけのポータルサイトを作るサイトである</dd>
+            <dt>今後について</dt>
+              <dd>まだ何も決まっていない</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div id="header_subtitle">
+      <h1 id="h1title">
+      画像スレのまとめブログ
+      </h1>
+    </div><!-- BOX終わり -->
+    <div class="container">
+      <h1>リストの使用</h1>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <ul class="list-inline" id="category">
+            <li><a href="http://headline.mtfj.net/">人気</a></li>
+            <li><a href="http://headline.mtfj.net/r7.html">すべて</a></li>
+            <li><a href="http://headline.mtfj.net/r2.html">VIP</a></li>
+            <li><a href="http://headline.mtfj.net/r1.html">ニュース</a></li>
+            <li><a href="http://headline.mtfj.net/r11.html">芸能</a></li>
+            <li><a href="http://headline.mtfj.net/r10.html">スポーツ</a></li>
+            <li><a href="http://headline.mtfj.net/r9.html">ゲーム・アニメ</a></li>
+            <li><a href="http://headline.mtfj.net/r5.html">ネタ</a></li>
+            <li><a href="http://headline.mtfj.net/r4.html">画像スレ</a></li>
+            <li><a href="http://headline.mtfj.net/r6.html">生活・男女</a></li>
+            <li><a href="http://headline.mtfj.net/r8.html">その他</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <ul id="category">
+          <!-- <ul class="list-unstyled" id="category"> -->
+            <li><a href="http://headline.mtfj.net/">人気</a></li>
+            <li><a href="http://headline.mtfj.net/r7.html">すべて</a></li>
+            <li><a href="http://headline.mtfj.net/r2.html">VIP</a></li>
+            <li><a href="http://headline.mtfj.net/r1.html">ニュース</a></li>
+            <li><a href="http://headline.mtfj.net/r11.html">芸能</a></li>
+            <li><a href="http://headline.mtfj.net/r10.html">スポーツ</a></li>
+            <li><a href="http://headline.mtfj.net/r9.html">ゲーム・アニメ</a></li>
+            <li><a href="http://headline.mtfj.net/r5.html">ネタ</a></li>
+            <li><a href="http://headline.mtfj.net/r4.html">画像スレ</a></li>
+            <li><a href="http://headline.mtfj.net/r6.html">生活・男女</a></li>
+            <li><a href="http://headline.mtfj.net/r8.html">その他</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>画像の使用</h1>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <!-- <img src="http://icooon-mono.com/i/icon_10439/icon_104390.svg" width="480" height="321" alt="cake" class="img-rounded" _pageexpand_="4"> -->
+          <!-- <img src="http://icooon-mono.com/i/icon_10439/icon_104390.svg" width="480" height="321" alt="cake" class="img-circle" _pageexpand_="4"> -->
+          <img src="http://icooon-mono.com/i/icon_10439/icon_104390.svg" width="480" height="321" alt="cake" class="img-thumbnail img-circle img-responsive" _pageexpand_="4">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="contents_margin clear">
+    <div class="contents_border center">
+    <div class="adv728_90">
+    </div>
+    </div>
+    </div>
+      <!-- +*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+* -->
+
+    <div class="container">
+      <h1>テーブルの使用</h1>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+              <thred>
+                <tr>
+                  <td class="active">[1]</td>
+                  <td class="success">[2]</td>
+                  <td class="warning">[3]</td>
+                  <td class="danger">[4]</td>
+                  <td class="info">[5]</td>
+                </tr>
+              </thred>
+              <tbody>
+                <tr>
+                  <td class="active">A1</td>
+                  <td class="success">A2</td>
+                  <td class="warning">A3</td>
+                  <td class="danger">A4</td>
+                  <td class="info">A5</td>
+                </tr>
+                <tr>
+                  <td class="success">B1</td>
+                  <td class="active">B2</td>
+                  <td class="warning">B3</td>
+                  <td class="info">B4</td>
+                  <td class="danger">B5</td>
+                </tr>
+                <tr>
+                  <td class="active">C1</td>
+                  <td class="success">C2</td>
+                  <td class="warning">C3</td>
+                  <td class="danger">C4</td>
+                  <td class="info">C5</td>
+                </tr>
+                <tr class="info">
+                  <td>D1</td>
+                  <td>D2</td>
+                  <td>D3</td>
+                  <td>D4</td>
+                  <td>D5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <%= yield %>
+  </body>
+</html>

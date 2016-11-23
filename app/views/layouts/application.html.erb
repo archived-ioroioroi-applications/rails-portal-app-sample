@@ -4,11 +4,186 @@
     <title>Myportal</title>
     <%= csrf_meta_tags %>
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <!-- <nav class="navbar navbar-inverse"> -->
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>  <!-- sr-only:スクリーンリーダーのみ. テキストは表示されない -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">ぽーたる<br>　ぽーたる</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+<!-- *+*+*+*++ page下に 「前のページ」「次のページ」アイコンを固定で +*+***+*+ -->
+  <div style="padding:70px 0 70px 0">
+    <nav class="navbar navbar-default navbar-fixed-bottom hidden-sm hidden-md hidden-lg">
+    <!-- <nav class="navbar navbar-default navbar-fixed-top"> -->
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">ぽーたる<br>　ぽーたる</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+<!-- +*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+* -->
+
+
+      <div class="container">
+        <div class="row">
+          <div class="jumbotron">
+            <h1>カラムA</h1>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3" id="header_box">
+            <div id="header_title">
+              <a href="http://headline.mtfj.net/"><img class=“img-responsive” src="http://rakugakiicon.com/ri/wp-content/uploads/2015/04/70b4d256c8f1f8830f7c1d5944db17a4.png" alt="とろたまヘッドライン"/></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <a href="/top/index/">通常表示</a>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <a href="/top/index_list/">一覧表示</a>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <a href="/">トップページ</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="hidden-xs hidden-sm col-md-2"><!-- 左サイドバー -->
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                Menu
+              </div>
+              <ul class="list nav nav-pills nav-stacked" id="category">
+              <!-- <ul class="list-unstyled" id="category"> -->
+               <li><a href="/tokyo/bank/tokyo-chiyoda.php">千代田区(482)</a></li>
+               <li><a href="/tokyo/bank/tokyo-chuo.php">中央区(375)</a></li>
+               <li><a href="/tokyo/bank/tokyo-minato.php">港区(461)</a></li>
+               <li><a href="/tokyo/bank/tokyo-shinjuku.php">新宿区(444)</a></li>
+               <li><a href="/tokyo/bank/tokyo-bunkyo.php">文京区(167)</a></li>
+               <li><a href="/tokyo/bank/tokyo-taito.php">台東区(201)</a></li>
+               <li><a href="/tokyo/bank/tokyo-sumida.php">墨田区(202)</a></li>
+               <li><a href="/tokyo/bank/tokyo-koto.php">江東区(287)</a></li>
+               <li><a href="/tokyo/bank/tokyo-shinagawa.php">品川区(267)</a></li>
+               <li><a href="/tokyo/bank/tokyo-meguro.php">目黒区(165)</a></li>
+               <li><a href="/tokyo/bank/tokyo-ota.php">大田区(374)</a></li>
+               <li><a href="/tokyo/bank/tokyo-setagaya.php">世田谷区(371)</a></li>
+               <li><a href="/tokyo/bank/tokyo-shibuya.php">渋谷区(327)</a></li>
+               <li><a href="/tokyo/bank/tokyo-nakano.php">中野区(154)</a></li>
+               <li><a href="/tokyo/bank/tokyo-suginami.php">杉並区(263)</a></li>
+               <li><a href="/tokyo/bank/tokyo-toshima.php">豊島区(273)</a></li>
+               <li><a href="/tokyo/bank/tokyo-kita.php">北区(171)</a></li>
+               <li><a href="/tokyo/bank/tokyo-arakawa.php">荒川区(119)</a></li>
+               <li><a href="/tokyo/bank/tokyo-itabashi.php">板橋区(297)</a></li>
+               <li><a href="/tokyo/bank/tokyo-nerima.php">練馬区(312)</a></li>
+               <li><a href="/tokyo/bank/tokyo-adachi.php">足立区(311)</a></li>
+               <li><a href="/tokyo/bank/tokyo-katsushika.php">葛飾区(219)</a></li>
+               <li><a href="/tokyo/bank/tokyo-edogawa.php">江戸川区(300)</a></li>
+               <li><a href="/tokyo/bank/tokyo-hachioji.php">八王子市(269)</a></li>
+               <li><a href="/tokyo/bank/tokyo-tachikawa.php">立川市(123)</a></li>
+               <li><a href="/tokyo/bank/tokyo-musashino.php">武蔵野市(123)</a></li>
+               <li><a href="/tokyo/bank/tokyo-mitaka.php">三鷹市(89)</a></li>
+               <li><a href="/tokyo/bank/tokyo-ome.php">青梅市(78)</a></li>
+               <li><a href="/tokyo/bank/tokyo-fuchu.php">府中市(133)</a></li>
+               <li><a href="/tokyo/bank/tokyo-akishima.php">昭島市(67)</a></li>
+               <li><a href="/tokyo/bank/tokyo-chofu.php">調布市(140)</a></li>
+               <li><a href="/tokyo/bank/tokyo-machida.php">町田市(227)</a></li>
+               <li><a href="/tokyo/bank/tokyo-koganei.php">小金井市(67)</a></li>
+               <li><a href="/tokyo/bank/tokyo-kodaira.php">小平市(102)</a></li>
+               <li><a href="/tokyo/bank/tokyo-hino.php">日野市(95)</a></li>
+               <li><a href="/tokyo/bank/tokyo-higashimurayama.php">東村山市(65)</a></li>
+               <li><a href="/tokyo/bank/tokyo-kokubunji.php">国分寺市(73)</a></li>
+               <li><a href="/tokyo/bank/tokyo-kunitachi.php">国立市(52)</a></li>
+               <li><a href="/tokyo/bank/tokyo-fussa.php">福生市(30)</a></li>
+               <li><a href="/tokyo/bank/tokyo-komae.php">狛江市(40)</a></li>
+               <li><a href="/tokyo/bank/tokyo-higashiyamato.php">東大和市(39)</a></li>
+               <li><a href="/tokyo/bank/tokyo-kiyose.php">清瀬市(39)</a></li>
+               <li><a href="/tokyo/bank/tokyo-higashikurume.php">東久留米市(64)</a></li>
+               <li><a href="/tokyo/bank/tokyo-musashimurayama.php">武蔵村山市(53)</a></li>
+               <li><a href="/tokyo/bank/tokyo-tama.php">多摩市(96)</a></li>
+               <li><a href="/tokyo/bank/tokyo-inagi.php">稲城市(39)</a></li>
+               <li><a href="/tokyo/bank/tokyo-hamura.php">羽村市(36)</a></li>
+               <li><a href="/tokyo/bank/tokyo-akiruno.php">あきる野市(41)</a></li>
+               <li><a href="/tokyo/bank/tokyo-nishitokyo.php">西東京市(106)</a></li>
+               <li><a href="/tokyo/bank/tokyo-nishitama.php">西多摩郡(50)</a></li>
+               <li><a href="/tokyo/bank/tokyo-oshima.php">大島町(8)</a></li>
+               <li><a href="/tokyo/bank/tokyo-hachijo.php">八丈町(8)</a></li>
+               <li>利島村(0)</li>
+               <li><a href="/tokyo/bank/tokyo-niijima.php">新島村(3)</a></li>
+               <li><a href="/tokyo/bank/tokyo-kouzushima.php">神津島村(1)</a></li>
+               <li><a href="/tokyo/bank/tokyo-miyake.php">三宅村(5)</a></li>
+               <li><a href="/tokyo/bank/tokyo-mikurasima.php">御蔵島村(1)</a></li>
+               <li><a href="/tokyo/bank/tokyo-aogashima.php">青ヶ島村(1)</a></li>
+               <li><a href="/tokyo/bank/tokyo-ogasawara.php">小笠原村(5)</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-10"><!-- コンテンツ本体. colが9にならない...呼び出したページでまた12本になる...のは呼び出したページでまたclass="container"してたのが原因でした -->
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

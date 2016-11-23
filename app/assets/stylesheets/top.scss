@@ -1,0 +1,15 @@
+// Place all the styles related to the top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+table.table-scroll{
+  display: block;
+  overflow-y: scroll;
+  height: 350px;
+}
+
+table.table-scroll tbody.tbody-scroll td.td-source{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

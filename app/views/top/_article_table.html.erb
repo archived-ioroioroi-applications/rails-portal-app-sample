@@ -1,0 +1,30 @@
+<div class="table-responsive">
+  <%
+  if scroll_on_off == 'ON'
+    table_class = 'table table-hover table-bordered table-condensed table-scroll h5'
+  elsif scroll_on_off == 'OFF'
+    table_class = 'table table-hover table-bordered table-condensed h5'
+  else
+    table_class = 'table table-hover table-bordered table-condensed h5'
+  end
+  %>
+  <table class="<%= table_class %>">
+  <!-- <table class="table table-hover table-bordered table-condensed table-scroll h5"> -->
+    <thead class="thead-scroll">
+      <tr>
+        <td class="hidden-xs td-uploadedtime">更新時間</td>
+        <td class="td-article">記事</td>
+        <td class="hidden-xs td-source">更新元</td>
+      </tr>
+    </thead>
+    <tbody class="tbody-scroll">
+      <% articles.each do |article| %>
+        <tr>
+          <td class="hidden-xs td-uploadedtime"><%= article.date.slice(0..10) %></td>
+          <td class="td-article"><a href="<%= article.article_link %>"><%= article.article_title %></a></td>
+          <td class="hidden-xs td-source"><a href="<%= article.article_source_link %>"><%= article.article_source %></a></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

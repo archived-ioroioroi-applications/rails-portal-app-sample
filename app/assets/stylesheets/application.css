@@ -11,5 +11,12 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require bootstrap.min
  *= require_self
  */
+
+.list#category{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 400px;
+}
